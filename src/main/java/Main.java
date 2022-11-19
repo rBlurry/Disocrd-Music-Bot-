@@ -13,7 +13,7 @@ import javax.security.auth.login.LoginException;
 public class Main {
     public static String requestChannel = "song-requests";
 
-    public static long requestChannelId = 1002750910893674576L;
+    public static long requestChannelId = 1011760821946298450L;
 
     public static String queueTitle = "\r\n__**Queue list:**__\r\n";
     public static String queueDescription = "Join a voice channel and queue songs by name or url in here.\r\n";
