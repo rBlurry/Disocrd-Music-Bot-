@@ -147,7 +147,7 @@ public class YoutubeAudioManager {
         trackScheduler.clean();
     }
 
-    public void setPlayPause(ButtonInteractionEvent event) {
+    public void setPlayPause() {
         trackScheduler.setPause();
     }
 
@@ -155,8 +155,8 @@ public class YoutubeAudioManager {
         trackScheduler.stop();
     }
 
-    public void remove(MessageReceivedEvent event, int song) {
-        trackScheduler.remove(event, song);
+    public void remove(int song) {
+        trackScheduler.remove(song);
     }
 
     public Boolean isPlaying() {

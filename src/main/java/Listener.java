@@ -135,45 +135,6 @@ public class Listener extends ListenerAdapter {
             }
             PlayHandler.handlePlay(event, message);
         }
-
-/*
-        } else if (!message.isEmpty()) {
-            char messagePrefix = message.charAt(0);
-            message = message.substring(1);
-            String[] divided = message.split(" ");
-
-            if (messagePrefix == prefix) {
-                switch (divided[0].toLowerCase()) {
-                    case ("play"):
-                        if (divided.length >= 2) {
-                            CommandHandler.handlePlay(event, message.substring(5));
-                        } else {
-                            CommandHandler.handleResponse(event, "No song detected.");
-                        }
-                        break;
-                    case ("setup"):
-                        CommandHandler.handleSetup(event);
-                        break;
-*/
-                        /*
-                    case ("file"):
-                        List<Message.Attachment> attachments = event.getMessage().getAttachments();
-                        if (attachments.size() > 0) {
-                            String fileExtension = attachments.get(0).getFileExtension();
-                            assert fileExtension != null;
-                            if (fileExtension.equals("mp3") || fileExtension.equals("wav") || fileExtension.equals("ogg")) {
-                                CommandHandler.handleFile(event, attachments.get(0));
-                            } else {
-                                CommandHandler.handleResponse(event, "No valid file attached.");
-                            }
-                        } else {
-                            CommandHandler.handleResponse(event, "No file attached.");
-                        }
-                        break;
-
-                         */
-
-
     }
 
     @Override

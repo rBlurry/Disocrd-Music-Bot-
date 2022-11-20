@@ -303,7 +303,7 @@ public class TrackScheduler extends AudioEventAdapter {
         }
     }
 
-    public void remove(MessageReceivedEvent event, int song) {
+    public void remove(int song) {
         if (!queue.isEmpty() && song <= queue.size()) {
             LinkedList<AudioTrack> aux = new LinkedList<>();
             queue.drainTo(aux);

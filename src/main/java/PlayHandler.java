@@ -125,7 +125,7 @@ public class PlayHandler {
                 event.deferEdit().queue();
                 return;
             }
-            youtube.setPlayPause(event);
+            youtube.setPlayPause();
         }
         event.deferEdit().queue();
     }
@@ -193,7 +193,7 @@ public class PlayHandler {
                 System.out.println("Bot not connected or playing, don't process button click");
                 return;
             }
-            youtube.remove(event, song);
+            youtube.remove(song);
         }
     }
 }
