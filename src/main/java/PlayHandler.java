@@ -179,11 +179,6 @@ public class PlayHandler {
             System.out.println("No audio manager, don't process button click");
         } else {
             YoutubeAudioManager youtube = audioManagers.get(event.getGuild().getId());
-            AudioManager audioManager = event.getGuild().getAudioManager();
-            if (!audioManager.isConnected() || !youtube.isPlaying()) {
-                System.out.println("Bot not connected or playing, don't process button click");
-                return;
-            }
             youtube.stop();
         }
     }
