@@ -8,8 +8,6 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-import javax.security.auth.login.LoginException;
-
 public class Main {
     public static String requestChannel = "song-requests";
 
@@ -34,7 +32,7 @@ public class Main {
     public static long requestTimer = System.currentTimeMillis();
     public static long buttonTimer = System.currentTimeMillis();
 
-    public static void main(String[] args) throws LoginException, IOException {
+    public static void main(String[] args) throws IOException {
 
         BufferedReader brTest = new BufferedReader(new FileReader("./config.txt"));
         String token = brTest.readLine();

@@ -71,6 +71,7 @@ public class SpotifyAPI {
         try {
             Paging<PlaylistTrack> execute = getPlaylistsItemsRequest.execute();
             String next = "start";
+            int total = 0;
             int i = 0;
             while (next != null) {
                 next = execute.getNext();
@@ -83,6 +84,7 @@ public class SpotifyAPI {
                             getTrack(playlistTrack.getTrack().getId(), youtube, event);
                     }
                 });
+                total += playlistTracks.length;
                 i += 100;
                 GetPlaylistsItemsRequest getting = spotifyApi
                         .getPlaylistsItems(uri)
