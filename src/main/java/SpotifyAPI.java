@@ -55,7 +55,7 @@ public class SpotifyAPI {
             Track track = getTrackRequest.execute();
             StringBuilder toSearch = new StringBuilder(track.getName());
             for (ArtistSimplified artist : track.getArtists()) {
-                toSearch.append(" ").append(artist.getName());
+                toSearch.append(" ").append(artist.getName()).append(" ").append("lyrics");
             }
             youtube.play(toSearch.toString(), event, true);
         } catch (Exception e) {
@@ -108,7 +108,7 @@ public class SpotifyAPI {
             for (TrackSimplified albumTrack : albumTracks) {
                 StringBuilder toSearch = new StringBuilder(albumTrack.getName());
                 for (ArtistSimplified artist : albumTrack.getArtists()) {
-                    toSearch.append(" ").append(artist.getName());
+                    toSearch.append(" ").append(artist.getName()).append(" ").append("lyrics");
                 }
                 youtube.play(toSearch.toString(), event, true);
             }
